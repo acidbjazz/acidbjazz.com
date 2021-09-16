@@ -77,7 +77,7 @@ const Home: NextPage = ({ res }: any) => {
               return (
                 <div className={`card ${!item.url && "disabled"}`} key={i}>
                   {item.url ? (
-                    <a href={item.url} target="_blank">
+                    <a href={item.url} target="_blank" rel="noreferrer">
                       <img className="cover" src={item.cover.url} alt={item.name} />
                       <h2>{item.name}</h2>
                     </a>
