@@ -57,16 +57,16 @@ const Home: NextPage = ({ res }: any) => {
           <p>{res.dataCollection.items[0].jobTitle}</p>
           <a href="mailto:acidbjazz@gmail.com">acidbjazz@gmail.com</a>
           <div className="social">
-            <a href="https://www.linkedin.com/in/acidbjazz/" target="_blank">
+            <a href="https://www.linkedin.com/in/acidbjazz/" target="_blank" rel="noreferrer">
               <Icon name={"linkedin"} />
             </a>
-            <a href="https://github.com/acidbjazz" target="_blank">
+            <a href="https://github.com/acidbjazz" target="_blank" rel="noreferrer">
               <Icon name={"github"} />
             </a>
-            <a href="https://www.instagram.com/acidbjazz" target="_blank">
+            <a href="https://www.instagram.com/acidbjazz" target="_blank" rel="noreferrer">
               <Icon name={"instagram"} />
             </a>
-            <a href="https://open.spotify.com/user/12124188210" target="_blank">
+            <a href="https://open.spotify.com/user/12124188210" target="_blank" rel="noreferrer">
               <Icon name={"spotify"} />
             </a>
           </div>
