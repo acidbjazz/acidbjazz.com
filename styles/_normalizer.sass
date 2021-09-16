@@ -1,0 +1,115 @@
+*,
+*:before,
+*:after
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+html
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  -ms-overflow-style: scrollbar
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+body
+  font-family: $font-text
+  font-size: $font-size--paragraph
+  color: $color-text
+  background: $color-background
+  -webkit-font-smoothing: antialiased
+
+[tabindex="-1"]:focus
+  outline: 0 !important
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  margin-bottom: 1rem
+
+h1
+  font-size: $font-size--h1
+
+h2
+  font-size: $font-size--h2
+
+h3
+  font-size: $font-size--h3
+
+p
+  margin-bottom: 1rem
+
+p > a,
+li > a
+  color: $color-text
+
+ol,
+ul
+  margin-bottom: 1rem
+  list-style-position: outside
+  padding-left: 1.2rem
+
+strong
+  font-weight: 700
+
+a
+  -webkit-text-decoration-skip: objects /* Remove gaps in links underline in iOS 8+ and Safari 8+.*/
+
+p a,
+table a
+  word-break: break-word
+  color: $color-text
+
+img
+  border: 0
+  width: 100%
+  display: flex
+
+video
+  width: 100%
+
+input,
+button,
+table,
+select
+  border: 0
+  outline: none
+  font-family: $font-ui
+
+table
+  border-collapse: collapse
+  margin-bottom: 1rem
+  width: 100%
+
+table,
+th,
+td
+  border: 1px solid $color-primary
+  padding: $gap05
+
+th
+  color: $color-primary
+
+input:focus,
+button:focus,
+table:focus,
+select:focus
+  outline: none
+
+a,
+area,
+button,
+[role="button"],
+input:not([type="range"]),
+label,
+select,
+summary,
+textarea
+  touch-action: manipulation
+
+hr
+  border: 0
+  border-top: 1px solid $color-text
+  margin: $gap2 0 $gap

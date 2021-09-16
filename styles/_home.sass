@@ -1,0 +1,94 @@
+.layout
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+header
+  background-color: white
+  text-align: center
+  padding: $gap
+  letter-spacing: $letter-spacing
+  > .lottie-cat
+    width: 400px
+    margin: 0 auto
+  > h1
+    font-family: $font-ui
+    font-weight: 300
+  > p
+    font-family: $font-primary
+    font-size: $font-size--h2
+    margin-bottom: $gap
+  > a
+    color: $color-text
+    font-family: $font-primary
+    font-size: $font-size--details
+    display: block
+    margin-bottom: $gap
+    &:hover
+      color: $color-menu
+  > .social
+    display: grid
+    grid-template-columns: auto auto
+    gap: $gap05
+    width: $gap2
+    margin: 0 auto
+    > a .icon svg
+      width: 20px
+      fill: $color-text
+      &:hover
+        fill: $color-menu
+
+main
+  flex-grow: 1
+  background-color: $color-background
+  padding: $gap
+  > .cards
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: $gap05
+    max-width: $page-width
+    margin: 0 auto
+    > .card
+      padding: $gap * 0.4
+      border-radius: $border-radius
+      &:hover
+        background-color: white
+        & h2
+          color: $color-menu
+      > a
+        text-decoration: none
+      .cover
+        width: 100%
+        border-radius: $border-radius / 2
+        margin-bottom: $gap05
+      > ul
+        list-style-type: none
+        padding-left: 0
+        margin-bottom: 0
+        > li strong
+          font-weight: 400
+          color: $color-primary
+
+footer
+  background-color: $color-secondary
+  color: white
+  font-size: $font-size--tiny
+  font-family: $font-primary
+  text-align: center
+  > .tech
+    padding: $gap
+  > .copy
+    background-color: $color-primary
+    padding: $gap
+
+/* responsive */
+
+@media (max-width: 900px)
+  main > .cards
+    grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 600px)
+  header > .lottie-cat
+    width: 100%
+  main > .cards
+    grid-template-columns: repeat(1, 1fr)
