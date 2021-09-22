@@ -1,0 +1,33 @@
+.cv
+  max-width: 600px
+  margin: 0 auto
+  > h2, h3
+    text-align: center
+  > .stack
+    list-style: none
+    padding-left: 0
+    > li strong
+      font-weight: 400
+      color: $color-primary
+  > .companies
+    margin-bottom: $gap
+  > .education
+    list-style: none
+    padding-left: 0
+    margin-bottom: $gap
+  > .download
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    margin: 0 auto
+    color: $color-menu
+    background-color: rgba(white, 0.5)
+    width: $gap2
+    padding: $gap025
+    border-radius: $border-radius
+    transition: $transition
+    &:hover
+      background-color: white
+    span
+      vertical-align: middle

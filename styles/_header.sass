@@ -1,0 +1,42 @@
+header
+  background-color: white
+  text-align: center
+  padding: $gap
+  letter-spacing: $letter-spacing
+  > .lottie-cat
+    width: 400px
+    margin: 0 auto
+  > h1
+    font-family: $font-ui
+    font-weight: 300
+  > p
+    font-family: $font-primary
+    font-size: $font-size--h2
+    margin-bottom: $gap
+  > a
+    color: $color-text
+    font-family: $font-primary
+    font-size: $font-size--details
+    display: block
+    margin-bottom: $gap
+    transition: $transition
+    &:hover
+      color: $color-menu
+  > .social
+    display: grid
+    grid-template-columns: auto auto
+    gap: $gap05
+    width: $gap2
+    margin: 0 auto $gap
+    > a .icon svg
+      transition: $transition
+      width: 20px
+      fill: $color-text
+      &:hover
+        fill: $color-menu
+
+/* responsive */
+
+@media (max-width: 600px)
+  header > .lottie-cat
+    width: 100%

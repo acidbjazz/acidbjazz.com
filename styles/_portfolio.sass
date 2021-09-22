@@ -1,0 +1,39 @@
+.portfolio
+  max-width: $page-width
+  margin: 0 auto
+  > .cards
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: $gap05
+    > .card
+      padding: $gap * 0.4
+      border-radius: $border-radius
+      background-color: rgba(white, 0.5)
+      transition: $transition
+      &:hover
+        background-color: white
+        & h2
+          color: $color-menu
+      > a
+        text-decoration: none
+      .cover
+        width: 100%
+        border-radius: 3px
+        margin-bottom: $gap05
+      > ul
+        list-style-type: none
+        padding-left: 0
+        margin-bottom: 0
+        > li strong
+          font-weight: 400
+          color: $color-primary
+
+/* responsive */
+
+@media (max-width: 900px)
+  .portfolio > .cards
+    grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 600px)
+  .portfolio > .cards
+    grid-template-columns: repeat(1, 1fr)
