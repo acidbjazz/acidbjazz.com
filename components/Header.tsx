@@ -33,9 +33,9 @@ const Header = () => {
   // console.log("divRef:", divRef.current);
   const [isVisible, setIsVisible] = useState(true);
 
-  const doSomething = (entries) => {
+  const doSomething = (entries:any) => {
     const [entry] = entries;
-    console.log("entry:", entry);
+    // console.log("entry:", entry);
     setIsVisible(entry.isIntersecting);
     if (entry.isIntersecting) {
       lottieRef.current.play();
