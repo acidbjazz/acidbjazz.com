@@ -28,14 +28,13 @@ const Header = () => {
     `,
     fetcher
   );
-  const lottieRef = useRef();
-  // const divRef = useRef();
-  // console.log("divRef:", divRef.current);
+
+  const lottieRef = useRef<any | null>(null);
+
   const [isVisible, setIsVisible] = useState(true);
 
-  const doSomething = (entries:any) => {
+  const doSomething = (entries: any) => {
     const [entry] = entries;
-    // console.log("entry:", entry);
     setIsVisible(entry.isIntersecting);
     if (entry.isIntersecting) {
       lottieRef.current.play();
@@ -52,14 +51,13 @@ const Header = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(doSomething, options);
-    if (lottieRef.current.animationItem) observer.observe(lottieRef.current?.animationItem?.wrapper);
+    lottieRef.current.animationItem && observer.observe(lottieRef.current?.animationItem?.wrapper);
   }, [lottieRef, options]);
 
   return (
     <header>
       <div className="lottie-cat">
         <Lottie
-          // onComplete={() => lottieRef.current.goToAndStop(1)}
           animationData={animationData}
           loop={true}
           autoplay={true}
@@ -86,9 +84,7 @@ const Header = () => {
         </a>
       </div>
       <div className="control">
-        {/* <button onClick={() => setIsStopped(true)}>stop</button> */}
         <button onClick={() => lottieRef.current.goToAndPlay(1)}>goToAndPlay(1)</button>
-        {/* <button onClick={() => setIsPaused(!isPaused)}>pause</button> */}
       </div>
     </header>
   );
