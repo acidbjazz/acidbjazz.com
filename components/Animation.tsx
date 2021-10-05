@@ -10,13 +10,13 @@ type AnimationProps = {
 const Animation = forwardRef(({ className }: AnimationProps, ref: any) => {
   const _className = className ? ` ${className}` : "";
 
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0,
-  };
-
   useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0,
+    };
+
     const watch = (entries: any) => {
       const [entry] = entries;
       entry.isIntersecting ? ref.current.play() : ref.current.pause();
