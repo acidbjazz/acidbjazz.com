@@ -24,7 +24,7 @@ const Animation = forwardRef(({ className }: AnimationProps, ref: any) => {
 
     const observer = new IntersectionObserver(watch, options);
     ref.current.animationItem && observer.observe(ref.current?.animationItem?.wrapper);
-  }, [ref, options]);
+  }, [ref]);
 
   return (
     <Lottie
