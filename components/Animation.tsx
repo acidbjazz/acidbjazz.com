@@ -10,11 +10,6 @@ type AnimationProps = {
 const Animation = forwardRef(({ className }: AnimationProps, ref: any) => {
   const _className = className ? ` ${className}` : "";
 
-  const watch = (entries: any) => {
-    const [entry] = entries;
-    entry.isIntersecting ? ref.current.play() : ref.current.pause();
-  };
-
   const options = {
     root: null,
     rootMargin: "0px",
@@ -22,6 +17,11 @@ const Animation = forwardRef(({ className }: AnimationProps, ref: any) => {
   };
 
   useEffect(() => {
+    const watch = (entries: any) => {
+      const [entry] = entries;
+      entry.isIntersecting ? ref.current.play() : ref.current.pause();
+    };
+
     const observer = new IntersectionObserver(watch, options);
     ref.current.animationItem && observer.observe(ref.current?.animationItem?.wrapper);
   }, [ref, options]);
