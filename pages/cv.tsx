@@ -12,11 +12,11 @@ const CV: NextPage = () => {
       </Head>
       <div className="cv">
         <h2>Experience</h2>
-        <h3>2011 - 2021: The Modern Web</h3>
+        <h3>2011 - 2022: The Modern Web</h3>
         <ul className="stack">
           <li>
-            <strong>Frontend:</strong> html5, css3 (sass, stylus, less, postcss, css modules), vanilla JS es6, node js,
-            react js, next js, gatsby js, phonegap, gulp, webpack
+            <strong>Frontend:</strong> html5, css3 (sass, stylus, less, postcss, css modules), vanilla JS es6,
+            typescript, node js, react js, next js, gatsby js, lottie & canvas animations, phonegap, gulp, webpack
           </li>
           <li>
             <strong>Backend:</strong> mysql, php, laravel, wordpress, drupal, shopify, contentful, netlify, vercel
@@ -26,6 +26,7 @@ const CV: NextPage = () => {
           </li>
         </ul>
         <ul className="companies">
+          <li>KAMEGO (USA) - Digital agency</li>
           <li>NEXT SOLUTIONS (Canada) - Digital agency</li>
           <li>LA PLEBE (Peru) - Communication agency</li>
           <li>ARELLANO MARKETING (Peru) - Digital marketing research area</li>
