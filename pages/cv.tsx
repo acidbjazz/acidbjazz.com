@@ -15,8 +15,8 @@ const CV: NextPage = () => {
         <h3>2011 - 2022: The Modern Web</h3>
         <ul className="stack">
           <li>
-            <strong>Frontend:</strong> html5, css3 (sass, stylus, less, postcss, css modules), vanilla JS es6,
-            typescript, node js, react js, next js, gatsby js, lottie & canvas animations, phonegap, gulp, webpack
+            <strong>Frontend:</strong> html5, css3 (sass, stylus, less, postcss, css modules), vanilla JS es8,
+            typescript, react js, next js, gatsby js, lottie & canvas animations, gulp, webpack, phonegap
           </li>
           <li>
             <strong>Backend:</strong> mysql, php, laravel, wordpress, drupal, shopify, contentful, netlify, vercel
